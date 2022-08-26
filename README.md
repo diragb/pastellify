@@ -35,7 +35,8 @@ I've often found myself using generic profile picture icons for users and though
     src='https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg'
     style="width: 80px; border-radius: 5px;"
   />
-  <span style="margin-top: 10px; font-style: italic;">"i am not vibing with this icon" ~me all the time fr</span>
+  <br />
+  <i>"i am not vibing with this icon" ~me all the time fr</i>
 </div>
 
 <br />
