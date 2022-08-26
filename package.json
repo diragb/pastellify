@@ -1,0 +1,40 @@
+{
+  "name": "pastellify",
+  "version": "0.1.0",
+  "description": "Deterministically turn any string into a soft pastel color. 🟣",
+  "main": "dist/index/index.js",
+  "types": "dist/index/index.d.ts",
+  "author": "Dirag Biswas (https://github.com/diragb)",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/diragb"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diragb/pastellify"
+  },
+  "bugs": {
+    "url": "https://github.com/diragb/pastellify/issues"
+  },
+  "homepage": "https://github.com/diragb/pastellify#readme",
+  "scripts": {
+    "build": "tsc"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "pastel",
+    "color",
+    "color generation",
+    "soft",
+    "hue",
+    "ui",
+    "typescript"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.8.2"
+  }
+}
