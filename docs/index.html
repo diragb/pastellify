@@ -1,0 +1,86 @@
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>🟣 Pastellify</title>
+  <link href='http://fonts.cdnfonts.com/css/clash-display' rel='stylesheet'>
+  <script>
+    const c2n = (c) => Math.abs(isNaN(parseInt(c)) ? c.toLowerCase().charCodeAt(0) - 96 : isNaN(parseInt(c)) ? 0 : parseInt(c));
+    const s2n = (s) => s.length > 1 ? parseInt(s.split('').reduce((a, c) => `${c2n(a) + c2n(c)}`)) : c2n(s);
+    const postProcess = (n, options) => options?.toCSS ? `hsl(${n[0]}, ${n[1]}%, ${n[2]}%)` : n;
+    const pastellify = (s, options) => postProcess([(3 * s2n(s) + 2 * s2n(s) + s2n(s)) % 360, options?.saturation ?? 78, options?.lightness ?? 73], options);
+    const changeBackgroundColor = c => document.body.style.backgroundColor = c;
+    const changeTextColor = c => {
+      document.getElementById('title').style.color = c;
+      document.getElementById('credit').style.color = c;
+    };
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      const textElement = document.getElementById('text-input');
+      textElement.addEventListener('keyup', (e) => {
+        const input = e.currentTarget.value.trim();
+        changeBackgroundColor(pastellify(input.length > 0 ? input : 'pastellify', { toCSS: true }));
+        changeTextColor(pastellify(input.length > 0 ? input : 'pastellify')[0] > 230 ? '#F7FFF7' : '343434');
+      });
+    });
+  </script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      background-color: hsl(30deg 78% 73%);
+      font-family: 'Clash Display', sans-serif;
+      transition: all 0.25s ease;
+    }
+
+    #title {
+      margin-bottom: 0.75rem;
+      font-size: 2rem;
+      font-weight: 500;
+      transition: all 0.25s ease;
+      user-select: none;
+    }
+
+    #text-input {
+      width: 30rem;
+      padding: 0.5rem 1rem;
+      font-size: 1.5rem;
+      border-radius: 5px;
+      font-family: 'Clash Display', sans-serif;
+      color: #343434;
+      border: none;
+      outline: none;
+      background-color: #F7FFF7;
+    }
+
+    #credit {
+      margin-top: 1rem;
+      color: #343434;
+      transition: all 0.25s ease;
+      user-select: none;
+    }
+
+    #username {
+      font-weight: 500;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    #username:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id='title'>Pastellify</div>
+  <input id='text-input' type='text' placeholder='Type anything..' />
+  <div id='credit'>Made by <a id='username' href='https://diragb.dev' target='_blank'>diragb</a></div>
+</body>
+</html>

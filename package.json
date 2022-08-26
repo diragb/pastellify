@@ -1,9 +1,9 @@
 {
   "name": "pastellify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Deterministically turn any string into a soft pastel color. 🟣",
-  "main": "dist/index/index.js",
-  "types": "dist/index/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "Dirag Biswas (https://github.com/diragb)",
   "funding": {
     "type": "individual",
