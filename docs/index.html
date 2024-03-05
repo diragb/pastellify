@@ -21,7 +21,49 @@
     property="twitter:image">
   <meta property="og:type" content="website">
   <meta content="summary_large_image" name="twitter:card">
-  <link href='https://fonts.cdnfonts.com/css/clash-display' rel='stylesheet'>
+  <style>
+    @font-face {
+      font-family: clash display;
+      font-style: normal;
+      font-weight: 400;
+      src: local('Clash Display'), url(https://fonts.cdnfonts.com/s/65008/ClashDisplayRegular.woff) format('woff')
+    }
+    
+    @font-face {
+      font-family: clash display;
+      font-style: normal;
+      font-weight: 200;
+      src: local('Clash Display'), url(https://fonts.cdnfonts.com/s/65008/ClashDisplayExtralight.woff) format('woff')
+    }
+    
+    @font-face {
+      font-family: clash display;
+      font-style: normal;
+      font-weight: 300;
+      src: local('Clash Display'), url(https://fonts.cdnfonts.com/s/65008/ClashDisplayLight.woff) format('woff')
+    }
+    
+    @font-face {
+      font-family: clash display;
+      font-style: normal;
+      font-weight: 500;
+      src: local('Clash Display'), url('fonts/ClashDisplayMedium.woff') format('woff')
+    }
+    
+    @font-face {
+      font-family: clash display;
+      font-style: normal;
+      font-weight: 600;
+      src: local('Clash Display'), url(https://fonts.cdnfonts.com/s/65008/ClashDisplaySemibold.woff) format('woff')
+    }
+    
+    @font-face {
+      font-family: clash display;
+      font-style: normal;
+      font-weight: 700;
+      src: local('Clash Display'), url(https://fonts.cdnfonts.com/s/65008/ClashDisplayBold.woff) format('woff')
+    }
+  </style>
   <script>
     const c2n = (c) => Math.abs(isNaN(parseInt(c)) ? c.toLowerCase().charCodeAt(0) - 96 : isNaN(parseInt(c)) ? 0 : parseInt(c));
     const s2n = (s) => s.length > 1 ? parseInt(s.split('').reduce((a, c) => `${c2n(a) + c2n(c)}`)) : c2n(s);
