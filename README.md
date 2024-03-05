@@ -10,7 +10,7 @@ Deterministically turn any string into a soft pastel color. 🟣
 - 🪶 **Extremely lightweight**: Source code is only *4 lines long*.
 - ⚡ **Blazingly fast**: Does not rely on any other package. Just gets the job done.
 
-<br />
+**Try it out here: https://diragb.github.io/pastellify/**
 
 # Installation
 ```bash
