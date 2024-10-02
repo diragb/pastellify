@@ -1,6 +1,6 @@
 {
   "name": "pastellify",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Deterministically turn any string into a soft pastel color. 🟣",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
